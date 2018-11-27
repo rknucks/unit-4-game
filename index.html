@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rodnee's Crystal Game</title>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  
+
+</head>
+<body>
+
+    
+  
+  <div id="shine">
+        <h1>The Number You Need to Reach: <span id="number-to-reach"></span</h1>   
+        
+            <audio id="win" src="win.mp3" preload="auto"></audio>
+   </div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+    var numberToReach = Math.floor((Math.random() * 101) + 19); {
+    
+
+     $("#number-to-reach").text(numberToReach);
+    }
+
+    var counter = 0;
+    var pointValues = [12, 2, 3, 7];
+
+    for (var i = 0; i < pointValues.length; i++) {
+
+        var myCrystal = $("<img>");
+
+        myCrystal.addClass("cool-crystal");
+
+        myCrystal.attr("src", "assets/images/crystal.jpg");
+
+        myCrystal.attr("data-clickvalue", pointValues[i]);
+
+        $("#shine").append(myCrystal);
+    }
+
+
+
+
+
+    $(".cool-crystal").on("click", function() {
+
+        var clickValue = ($(this).attr("data-clickvalue"));
+    clickValue = parseInt(clickValue);
+    
+    counter += clickValue;
+
+    
+    alert("New score: " + counter);
+
+    if (counter === numberToReach) {
+        //document.getElementById("win").play();
+      alert("You Got It!");
+    }
+
+    else if (counter >= numberToReach) {
+      alert("You lose!!");
+    }
+
+  });
+
+    
+
+
+  </script>
+</body>
+</html>
