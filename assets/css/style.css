@@ -3,9 +3,33 @@
     height: 300px;
   }
 
-  #number-to-reach{
-      background-color: aquamarine;
-      color: silver;
+#number-to-reach{
+      background-color: yellowgreen;
+      color: black;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   }
 
+body {
+    background-image: url("/assets/images/cave.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#instructions {
+    background-color: lightblue;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 5px solid;
+}
+
+h1 {
+    color: rgb(175, 241, 233);
+    background-color: black;
+}
+#numberWins {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#numberLosses {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
