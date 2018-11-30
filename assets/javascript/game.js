@@ -34,7 +34,7 @@ $(document).ready(function () {
         clickValue = parseInt(clickValue);
         counter += clickValue;
         console.log(clickValue);
-        alert("New score: " + counter);
+        $("#newScore").text("New score: " + counter);
         if (counter === numberToReach) {
             alert("You Got It!");
             wins++;
